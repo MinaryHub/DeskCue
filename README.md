@@ -17,12 +17,10 @@ straight lines bow, text smears at the edges, and no amount of moving the projec
 
 **ProjectorWarp** is a free Windows utility that fixes it in software. It inverse-warps the image in
 real time so straight lines land straight on the surface: corner-pin keystone, a Bézier surface mesh
-you drag into shape, polygon masking, colour correction, and edge blending for multi-projector setups.
+you drag into shape, colour correction, and edge blending for multi-projector setups.
 
 Everything stays on the GPU. Decoding, capture and warping share a single Direct3D 11 device, so 4K
 video plays without dropping frames.
-
-> **The interface is in Korean.** Button names below are given as they appear, with an English gloss.
 
 ---
 
@@ -48,16 +46,15 @@ written to the registry unless you turn on start-at-logon yourself.
 
 **Sources** — pick one of two:
 
-- **내장 재생** *(built-in playback)* — play video files, or PPT / PDF / image slides, directly in the
-  app. No external player or PowerPoint window to keep alive.
-- **창** *(window capture)* — capture any running window through `Windows.Graphics.Capture`.
+- **Built-in playback** — play video files, or PPT / PDF / image slides, directly in the app.
+  No external player or PowerPoint window to keep alive.
+- **Window** — capture any running window through `Windows.Graphics.Capture`.
 
-**Geometry correction**, in three layers you can combine:
+**Geometry correction**, in two layers you can combine:
 
 1. **Corner pin / keystone** — drag the four corners; a 3×3 homography is solved from them.
 2. **Bézier surface** — drag a 3×3 to 6×6 grid of control points to follow the curve of the wall.
    Tessellation runs from 16×16 to 128×128.
-3. **Masking** — cut spill light with polygon black masks.
 
 **Colour and blending** — brightness, contrast and gamma, plus per-edge blending for multi-projector
 setups.
@@ -75,10 +72,10 @@ its own.
 
 ## Getting started
 
-1. **Choose a source** — open a file under **내장 재생**, or select a window under **창**.
-2. **Choose the output monitor, then press 출력 시작** *(start output)*. A borderless fullscreen window
-   opens on that monitor and the selected source starts with it. Whether anything is on screen is
-   decided by **출력 시작** / **출력 중지** *(stop output)* alone.
+1. **Choose a source** — open a file under **Built-in playback**, or select a window under **Window**.
+2. **Choose the output monitor, then press Start output.** A borderless fullscreen window opens on
+   that monitor and the selected source starts with it. Whether anything is on screen is decided by
+   **Start output** / **Stop output** alone.
 3. **Press `F1`** on the output window to enter edit mode and drag the control points into shape.
    `F2` puts up a test pattern, which makes alignment much easier.
 4. **Press `Ctrl+S`** to save. The alignment comes back the next time you start.
@@ -99,12 +96,11 @@ Arrow keys nudge the selected control point by one pixel, `Shift` + arrows by te
 
 ## Updates
 
-The app checks this repository for new releases under **9. 버전 · 업데이트** *(version and updates)*.
-There is nothing to configure.
+The app checks this repository for new releases under **8. Version · updates**. There is nothing to
+configure.
 
 It checks quietly after start-up and speaks up only when a newer version exists. Nothing changes
-until you press **설치 후 재시작** *(install and restart)* — it will never restart itself in the
-middle of a projection.
+until you press **Install and restart** — it will never restart itself in the middle of a projection.
 
 ---
 
@@ -126,7 +122,7 @@ executable is published here, and the app's updater reads the latest release fro
 Bug reports and requests are welcome in [Issues](https://github.com/MinaryHub/ProjectorWarp/issues).
 What helps most:
 
-- the ProjectorWarp version (in the title bar, or under **9. 버전 · 업데이트**)
+- the ProjectorWarp version (in the title bar, or under **8. Version · updates**)
 - your Windows version and GPU
 - the source you used — built-in playback or window capture, and for video, the container and codec
 - whatever the status bar at the top of the control panel said
