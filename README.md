@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/icon.png" width="88" alt="ProjectorWarp" />
+<img src="docs/icon.png" width="88" alt="DeskCue" />
 
 # ProjectorWarp
 
