@@ -2,7 +2,7 @@
 
 <img src="docs/icon.png" width="88" alt="DeskCue" />
 
-# ProjectorWarp
+# DeskCue
 
 **Project onto curved walls, pillars and arches — and keep straight lines straight.**
 
